@@ -1,6 +1,27 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
+import { Navbar } from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import localFont from "next/font/local";
+import { Roboto } from "next/font/google";
+
+
+const lemon = localFont({
+  src: [
+    { path: "../public/fonts/Lemon-Regular.ttf", weight: "400", style: "normal" },
+  ],
+  variable: "--font-lemon",
+  display: "swap",
+});
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"], // هر وزنی که می‌خوای
+  variable: "--font-roboto",
+  display: "swap",
+});
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,11 +44,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en"  className={`${lemon.variable} ${roboto.variable}`} >
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
