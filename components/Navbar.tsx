@@ -18,12 +18,12 @@ export const Navbar: React.FC = () => {
     <header
       className={[
         
-        "sticky top-0 z-50 w-auto ",
+        "sticky top-1 z-50 w-auto ",
         "content-center",
         "rounded-full",
         "mt-3 mx-5",
         // bg + optional blur:
-        "bg-[conic-gradient(from_90deg_at_85%_57%,rgba(212,235,226,1)_13%,rgba(209,231,223,1)_41%,rgba(209,231,223,1)_86%,rgba(209,231,223,1)_96%)]",
+        //"bg-[conic-gradient(from_90deg_at_85%_57%,rgba(212,235,226,1)_13%,rgba(209,231,223,1)_41%,rgba(209,231,223,1)_86%,rgba(209,231,223,1)_96%)]",
         "backdrop-blur supports-[backdrop-filter]:bg-white/60",
         // animated shadow when scrolling:
         scrolled ? "shadow-md/50 shadow-md border-b border-black/5" : "shadow-none",

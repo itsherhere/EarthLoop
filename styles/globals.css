@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 :root {
---earthloop-gradient: linear-gradient(to bottom right, #3A625B, #4E716C, #2E5F56);
+  --earthloop-gradient: conic-gradient(from 180deg, #60887C, #39897d, #2e5f56, #043A28);
+  
 }
 
 @theme inline {
@@ -146,7 +147,7 @@ body {
 }
 
 @theme {
-  /* کلاس tailwind به نام font-lemon می‌سازد */
+ 
   --font-lemon: var(--font-lemon), sans-serif;
 }
 @theme {

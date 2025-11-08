@@ -25,7 +25,7 @@ export default function Hero({
     <section
       className="
         relative isolate
-        bg-conic-180 from-[#38635d] via-[#39897d] to-[#2E5F56]
+        //bg-conic-180 from-[#38635d] via-[#39897d] to-[#2E5F56]
         //bg-gradient-to-r from-[#3A625B] via-[#4E716C] to-[#2E5F56]
         text-white
       "
