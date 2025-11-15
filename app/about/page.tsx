@@ -1,4 +1,4 @@
-import AboutEarthLoop from "@/components/AboutEarthLoop";
+import AboutEarthLoop from "@/components/AboutUs";
 
 export const metadata = {
   title: "About — EarthLoop",
@@ -10,11 +10,11 @@ export default function AboutPage() {
   return (
     <main
       className="
-        bg-gradient-to-br from-[#E8F1EC] via-[#D6E6DF] to-[#7AA39C]
+        bg-gradient-to-br from-[#2c665e] via-[#92beb9] to-[#38635d]
         min-h-[100dvh] text-black
       "
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mt-8">
         <AboutEarthLoop />
       </div>
     </main>

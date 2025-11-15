@@ -1,7 +1,9 @@
-"use client"
+"use client";
+
 import React from "react";
 import Image from "next/image";
-
+import Link from "next/link";
+import Button from "@/components/ui/Button";
 
 export const Navbar: React.FC = () => {
   const [open, setOpen] = React.useState(false);
@@ -9,55 +11,97 @@ export const Navbar: React.FC = () => {
 
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 4);
-    onScroll(); // init
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <header
+    <div
       className={[
-        
-        "sticky top-1 z-50 w-auto ",
+        "sticky top-2 z-50 mx-5 ",
+        "rounded-xl md:rounded-3xl lg:rounded-full",
         "content-center",
-        "rounded-full",
-        "mt-3 mx-5",
-        // bg + optional blur:
-        //"bg-[conic-gradient(from_90deg_at_85%_57%,rgba(212,235,226,1)_13%,rgba(209,231,223,1)_41%,rgba(209,231,223,1)_86%,rgba(209,231,223,1)_96%)]",
-        "backdrop-blur supports-[backdrop-filter]:bg-white/60",
-        // animated shadow when scrolling:
-        scrolled ? "shadow-md/50 shadow-md border-b border-black/5" : "shadow-none",
-        "transition-shadow"
+        "backdrop-blur    supports-[backdrop-filter]:bg-white/60",
+        scrolled
+          ? "shadow-md shadow-black/10 border border-black/5"
+          : "shadow-none border border-transparent",
+        "transition-shadow transition-colors duration-200",
       ].join(" ")}
     >
-      <nav className="mx-auto max-w-1xl px-2 sm:px-6 lg:px-8 ">
+      <nav className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-2">
         {/* top bar */}
         <div className="flex h-16 items-center justify-between">
           {/* logo */}
-          <a href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.svg" alt="EarthLoop" width={60} height={50} />
             <span className="font-lemon text-2xl sm:text-3xl leading-none">
               <span className="text-black">Earth</span>
               <span className="text-[#1d683a]">Loop</span>
             </span>
-          </a>
+          </Link>
 
           {/* desktop menu */}
           <div className="hidden lg:flex items-center gap-8">
-            <a className="text-black/70 text-[18px] tracking-wide hover:opacity-100 transition" href="#about">About</a>
-            <a className="text-black/70 font-medium text-[18px] tracking-wide hover:opacity-100 transition" href="#solutions">Solutions</a>
-            <a className="text-black/70 font-medium text-[18px] tracking-wide hover:opacity-100 transition" href="#blog">Blog</a>
-            <a className="text-black/70 font-medium text-[18px] tracking-wide hover:opacity-100 transition" href="#contact">Contact</a>
+            <Link
+              href="/about"
+              className="text-black/70 text-[18px] tracking-wide hover:text-black transition"
+            >
+              About
+            </Link>
+            <Link
+              href="/solutions"
+              className="text-black/70 text-[18px] tracking-wide hover:text-black transition"
+            >
+              Solutions
+            </Link>
+            <Link
+              href="/blog"
+              className="text-black/70 text-[18px] tracking-wide hover:text-black transition"
+            >
+              Blog
+            </Link>
+            <Link
+              href="/contact"
+              className="text-black/70 text-[18px] tracking-wide hover:text-black transition"
+            >
+              Contact
+            </Link>
           </div>
 
           {/* actions (desktop) */}
           <div className="hidden lg:flex items-center gap-3">
-            <button className="h-10 px-7 rounded-full bg-white border-2 border-[#7f6b6b] shadow-[7px_7px_4px_#00000040] text-[16px] font-Roboto font-medium" >
+            <Button
+              href="/signin"
+              variant=""
+              size="md"
+              className="
+              transform  hover:text-[#1d3630]
+              hover:bg-[#caf1e895] hover:border-[#4e796f] transition duration-200  hover:text-[18px]
+                bg-white
+                border-2 border-[#356a5d]
+                shadow-[2px_4px_4px_#00000040]
+                text-[16px] font-Roboto font-medium
+              "
+            >
               Sign in
-            </button>
-            <button className="h-10 px-7 rounded-full bg-[#3f7b6c] border-2 border-[#7f6b6b] shadow-[7px_7px_4px_#00000040] text-[16px] font-Roboto font-medium text-white">
+            </Button>
+
+            <Button
+              href="/login"
+              variant=""
+              size="md"
+              className="
+                transform bg-[#356a5d] hover:text-[#356a5d]
+                hover:bg-[#caf1e895] hover:border-[#4e796f] transition duration-200  hover:text-[18px]
+                border-2 border-[#c6c1ac8f]
+                shadow-[2px_4px_4px_#00000040]
+                text-[16px] font-Roboto font-medium text-white
+              "
+            >
               Log in
-            </button>
+            </Button>
+            {/* fix hover effects */}
           </div>
 
           {/* mobile hamburger */}
@@ -67,11 +111,31 @@ export const Navbar: React.FC = () => {
             aria-expanded={open}
             onClick={() => setOpen(!open)}
           >
-            <svg className={`h-6 w-6 ${open ? "hidden" : "block"}`} viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M4 6h16M4 12h16M4 18h16" strokeWidth="2" strokeLinecap="round" />
+            {/* open icon */}
+            <svg
+              className={`h-6 w-6 ${open ? "hidden" : "block"}`}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                d="M4 6h16M4 12h16M4 18h16"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
             </svg>
-            <svg className={`h-6 w-6 ${open ? "block" : "hidden"}`} viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M6 18L18 6M6 6l12 12" strokeWidth="2" strokeLinecap="round" />
+            {/* close icon */}
+            <svg
+              className={`h-6 w-6 ${open ? "block" : "hidden"}`}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                d="M6 18L18 6M6 6l12 12"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
             </svg>
           </button>
         </div>
@@ -83,21 +147,63 @@ export const Navbar: React.FC = () => {
           }`}
         >
           <div className="pt-2 pb-4 space-y-1">
-            <a className="block px-3 py-2 rounded-md text-base font-medium text-black/80 hover:bg-black/5" href="#about">About</a>
-            <a className="block px-3 py-2 rounded-md text-base font-medium hover:bg-black/5" href="#solutions">Solutions</a>
-            <a className="block px-3 py-2 rounded-md text-base font-medium hover:bg-black/5" href="#blog">Blog</a>
-            <a className="block px-3 py-2 rounded-md text-base font-medium hover:bg-black/5" href="#contact">Contact</a>
-            <div className="mt-2 flex gap-2 px-2">
-              <button className="h-10 px-4 rounded-full bg-white border-2 border-black shadow-[7px_7px_4px_#00000040] text-sm font-medium w-full">
+            <Link
+              href="/about"
+              className="block px-3 py-2 rounded-md text-base font-medium text-black/80 hover:bg-black/5"
+            >
+              About
+            </Link>
+            <Link
+              href="/solutions"
+              className="block px-3 py-2 rounded-md text-base font-medium text-black/80 hover:bg-black/5"
+            >
+              Solutions
+            </Link>
+            <Link
+              href="/blog"
+              className="block px-3 py-2 rounded-md text-base font-medium text-black/80 hover:bg-black/5"
+            >
+              Blog
+            </Link>
+            <Link
+              href="/contact"
+              className="block px-3 py-2 rounded-md text-base font-medium text-black/80 hover:bg-black/5"
+            >
+              Contact
+            </Link>
+
+            <div className="mt-3 flex gap-2 px-2">
+              <Button
+                href="/signin"
+                variant="outline"
+                size="sm"
+                className="
+                  bg-white
+                  border-2 border-black
+                  shadow-[7px_7px_4px_#00000040]
+                  text-sm font-medium w-full
+                "
+              >
                 Sign in
-              </button>
-              <button className="h-10 px-4 rounded-full bg-[#3f7b6c] border-2 border-[#7f6b6b] shadow-[7px_7px_4px_#00000040] text-sm font-medium text-white w-full">
+              </Button>
+
+              <Button
+                href="/login"
+                variant="filled"
+                size="sm"
+                className="
+                  bg-[#3f7b6c] hover:bg-[#356a5d]
+                  border-2 border-[#7f6b6b]
+                  shadow-[7px_7px_4px_#00000040]
+                  text-sm font-medium text-white w-full
+                "
+              >
                 Log in
-              </button>
+              </Button>
             </div>
           </div>
         </div>
       </nav>
-    </header>
+    </div>
   );
 };

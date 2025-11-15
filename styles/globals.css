@@ -1,7 +1,10 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --earthloop-gradient: conic-gradient(from 180deg, #60887C, #39897d, #2e5f56, #043A28);
+  --earthloop-gradient: conic-gradient(from 200deg at 50% 40%, #38635d, #60887C, #2e5f56, #38635d);
   
 }
 
@@ -21,7 +24,7 @@
 
 html,
 body {
-  background: var(--earthloop-gradient);;
+ background: transparent;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -154,3 +157,27 @@ body {
   
   --font-Roboto: var(--font-Roboto), sans-serif;
 }
+
+.font-price    { font-family: var(--font-galdeano), ui-sans-serif, system-ui; }
+.font-title    { font-family: var(--font-dm-sans), ui-sans-serif, system-ui; }
+.font-subtitle { font-family: var(--font-poppins), ui-sans-serif, system-ui; }
+
+
+/* Blog title font (Bungee Shade variable from layout) */
+.blog-title { font-family: var(--font-bungee-shade), system-ui, sans-serif; }
+
+/* Stable aspect helpers (works even if Tailwind aspect plugin isn't there) */
+.aspect-16-10 { aspect-ratio: 16 / 10; }
+.aspect-16-11 { aspect-ratio: 16 / 11; }
+
+/* Simple glass button */
+.glass-btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .5rem 1rem; border-radius: 9999px; font-size: .875rem; font-weight: 500;
+  background: rgba(255,255,255,.18);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.35);
+  box-shadow: 0 4px 18px rgba(2,6,23,.10);
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+.glass-btn:hover { transform: translateY(-1px); background: rgba(255,255,255,.24); box-shadow: 0 8px 24px rgba(2,6,23,.14); }

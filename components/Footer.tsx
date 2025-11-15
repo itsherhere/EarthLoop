@@ -1,4 +1,3 @@
-// components/FooterMinimal.tsx
 import Link from "next/link";
 
 export default function FooterMinimal() {
@@ -8,11 +7,9 @@ export default function FooterMinimal() {
     <footer
       className="
         text-center text-white
-        bg-gradient-to-br from-[#3A625B] via-[#4E716C] to-[#577D77]
-        px-6 py-2
+        px-6 pb-2 pt-4
       "
     >
-      {/* Brand */}
       <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">EarthLoop</h2>
       <p className="mt-2 text-lg md:text-xl text-white/80">Sustainability simplified.</p>
 
@@ -34,7 +31,7 @@ export default function FooterMinimal() {
         </Social>
 
         <Social href="https://twitter.com" label="Twitter / X">
-          {/* Twitter (old bird icon for familiarity) */}
+          {/* Twitter */}
           <path d="M24 4.56c-.88.39-1.83.66-2.83.78 1.02-.61 1.8-1.57 2.16-2.73-.95.56-2.01.97-3.13 1.19a4.93 4.93 0 0 0-8.4 4.49A13.98 13.98 0 0 1 1.67 3.15a4.92 4.92 0 0 0 1.52 6.57c-.74-.02-1.44-.23-2.06-.57a4.93 4.93 0 0 0 3.95 4.86c-.67.18-1.38.21-2.08.08a4.94 4.94 0 0 0 4.61 3.42A9.9 9.9 0 0 1 0 19.54a13.98 13.98 0 0 0 7.56 2.22c9.14 0 14.14-7.72 13.84-14.65A9.9 9.9 0 0 0 24 4.56z" />
         </Social>
 
@@ -52,7 +49,7 @@ export default function FooterMinimal() {
   );
 }
 
-/* ---------- Helpers ---------- */
+
 function NavItem({ href, children }: { href: string; children: React.ReactNode }) {
   return (
     <li>
