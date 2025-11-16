@@ -92,19 +92,35 @@ export default function Hero({
         
         {/* Tree Illustration */}
         <div className="mt-6 sm:mt-8">
-          <div className="relative mx-auto h-[280px] w-auto sm:h-[360px] lg:h-[440px] aspect-[3/2] sm:aspect-[3/2]">
-            <Image
-              src={treeSrc}
-              alt="EarthLoop tree illustration"
-              fill
-              priority
-              className="object-contain drop-shadow-[0_30px_30px_rgba(0,0,0,0.35)]"
-              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 800px"
-            />
-          </div>
-          {/* ground shadow -nw*/}
-          <div className="ml-[200px] mt-2 h-4 w-48 sm:w-64 rounded-[999px] bg-black/30 blur-xl opacity-50" />
-        </div>
+  <div className="relative mx-auto h-[280px] w-auto sm:h-[360px] lg:h-[440px] aspect-[3/2] sm:aspect-[3/2]">
+    <div className="tree-stack">
+    
+      <Image
+        src={treeSrc}
+        alt="EarthLoop tree illustration"
+        fill
+        priority
+        className="object-contain drop-shadow-[0_30px_30px_rgba(0,0,0,0.35)] tree-img-base"
+        sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 800px"
+      />
+
+      {/* leaves */}
+      <Image
+        src={treeSrc}
+        alt="EarthLoop tree leaves"
+        fill
+        priority
+        className="object-contain drop-shadow-[0_30px_30px_rgba(0,0,0,0.35)] tree-img-leaves"
+        sizes="(max-width: 640px) 90vw, (max-width: 1024px) 70vw, 800px"
+      />
+    </div>
+  </div>
+
+  
+  <div className="ml-[200px] mt-2 h-4 w-48 sm:w-64 rounded-[999px] bg-black/30 blur-xl opacity-50" />
+</div>
+
+
       </div>
     </section>
   );

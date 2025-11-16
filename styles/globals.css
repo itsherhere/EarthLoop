@@ -181,3 +181,75 @@ body {
   transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
 }
 .glass-btn:hover { transform: translateY(-1px); background: rgba(255,255,255,.24); box-shadow: 0 8px 24px rgba(2,6,23,.14); }
+
+.tree-wind {
+  animation: tree-sway 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* انیمیشن باد ملایم */
+@keyframes tree-sway {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(0.8deg) scale(1.01);
+  }
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+  75% {
+    transform: rotate(-0.8deg) scale(1.01);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+/* استک دو لایهٔ درخت */
+.tree-stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* مطمئن می‌شیم هر دو لایه دقیقاً روی هم باشن */
+.tree-img-base,
+.tree-img-leaves {
+  position: absolute !important;
+  inset: 0 !important;
+}
+
+/* فقط تاج درخت توی این لایه دیده بشه و تکون بخوره */
+.tree-img-leaves {
+  /* top right bottom left → این یعنی پایین تصویر رو قیچی کن */
+  clip-path: inset(0 0 45% 0);
+  /* اگر تنه هنوز تکون می‌خوره، عدد 45% رو بیشتر کن (مثلاً 50%) */
+
+  animation: leaves-wind 4s ease-in-out infinite;
+  transform-origin: 50% 42%; /* نقطهٔ چرخش تقریباً سر تنه */
+}
+
+/* خود تنه ثابت می‌مونه، نیازی به انیمیشن نداره */
+.tree-img-base {
+  transform-origin: bottom center;
+}
+
+/* انیمیشن باد ملایم فقط برای تاج */
+@keyframes leaves-wind {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(1px) rotate(0.4deg);
+  }
+  50% {
+    transform: translateX(0) rotate(0deg);
+  }
+  75% {
+    transform: translateX(-1px) rotate(-0.4deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}

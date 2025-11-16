@@ -24,3 +24,4 @@ export function getPostBySlug(slug: string): Post | undefined {
 export function getAllSlugs(): string[] {
   return (posts as Post[]).map(p => p.slug);
 }
+
