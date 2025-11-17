@@ -1,58 +1,16 @@
-// import { supabase } from "@/lib/supabaseClient";
 
-// export async function GET() {
-//   const { data, error } = await supabase.from("test").select();
-//   if (data?.length == 0) {
-//     return Error();
-//   }
-//   if (error) {
-//     return new Response(
-//       JSON.stringify({ success: false, error: error.message }),
-//       { status: 500 }
-//     );
-//   }
-
-//   return new Response(JSON.stringify({ success: true, data }), { status: 200 });
-// }
-
-// interface postbody {
-//   category: string;
-//   unit: string;
-//   factor: number;
-//   source: string;
-// }
-// export async function POST(req: Request) {
-//   try {
-//     const body: postbody = await req.json();
-//     if (!body.category || !body.unit || !body.factor || !body.source) {
-//       return new Response(
-//         JSON.stringify({ success: false, error: "All field are required" }),
-//         { status: 400 }
-//       );
-//     }
-//     const { data, error } = await supabase
-//       .from("test")
-//       .insert([body]);
-//     if (error) {
-//       return Response.json(
-//         { success: false, error: error.message },
-//         { status: 500 }
-//       );
-//     }
-//     return Response.json({ success: true, data });
-//   } catch (err: any) {
-//     return Response.json(
-//       { success: false, error: err.massage },
-//       { status: 500 }
-//     );
-//   }
-// }
 
 import { createClient } from '@supabase/supabase-js';
 import { parse } from 'csv-parse/sync';
 import { NextRequest, NextResponse } from 'next/server';
 import * as XLSX from 'xlsx';
-import { supabase } from "@/lib/supabaseClient";
+// import { supabase } from "@/lib/supabaseClient";
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+
 
 
 
