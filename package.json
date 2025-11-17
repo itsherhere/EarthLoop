@@ -3,21 +3,31 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "TURBOPACK=0 next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@supabase/supabase-js": "^2.80.0",
+=======
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.4.0",
+>>>>>>> origin/master
     "clsx": "^2.1.1",
     "csv-parse": "^6.1.0",
     "framer-motion": "^12.23.24",
+    "lucide-react": "^0.553.0",
     "next": "16.0.1",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "tailwind-merge": "^3.3.1",
+<<<<<<< HEAD
     "xlsx": "^0.18.5"
+=======
+    "three": "^0.181.1"
+>>>>>>> origin/master
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

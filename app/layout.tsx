@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
 import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import localFont from "next/font/local";
-import { Roboto } from "next/font/google";
+import {Geist, Geist_Mono ,Roboto ,Bungee_Shade, Inter, Galdeano, DM_Sans, Poppins } from "next/font/google";
 
 
 const lemon = localFont({
@@ -21,6 +20,14 @@ const roboto = Roboto({
   variable: "--font-roboto",
   display: "swap",
 });
+
+const bungeeShade = Bungee_Shade({ subsets: ["latin"], weight: "400", variable: "--font-bungee-shade" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+
+const galdeano = Galdeano({ weight: "400", subsets: ["latin"], variable: "--font-galdeano" });
+const dmSans   = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
+const poppins  = Poppins({ weight: ["400","500","600"], subsets: ["latin"], variable: "--font-poppins" });
+
 
 
 const geistSans = Geist({
@@ -44,13 +51,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en"  className={`${lemon.variable} ${roboto.variable}`} >
+    <html lang="en"  className={`${lemon.variable} ${roboto.variable} ${bungeeShade.variable} ${inter.variable} ${galdeano.variable} ${dmSans.variable} ${poppins.variable}`} >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
+        style={{background:"fffffff" }}
       >
-        <Navbar/>
+        <div className="bg-gradient-to-r from-[#1f5049] via-[#3b7b71] to-[#2E5F56]">
+          <Navbar/>
+          
         {children}
         <Footer/>
+        </div>
       </body>
     </html>
   );

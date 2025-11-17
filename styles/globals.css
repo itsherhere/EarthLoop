@@ -1,7 +1,10 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --earthloop-gradient: conic-gradient(from 180deg, #60887C, #39897d, #2e5f56, #043A28);
+  --earthloop-gradient: conic-gradient(from 200deg at 50% 40%, #38635d, #60887C, #2e5f56, #38635d);
   
 }
 
@@ -21,7 +24,7 @@
 
 html,
 body {
-  background: var(--earthloop-gradient);;
+ background: transparent;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -153,4 +156,100 @@ body {
 @theme {
   
   --font-Roboto: var(--font-Roboto), sans-serif;
+}
+
+.font-price    { font-family: var(--font-galdeano), ui-sans-serif, system-ui; }
+.font-title    { font-family: var(--font-dm-sans), ui-sans-serif, system-ui; }
+.font-subtitle { font-family: var(--font-poppins), ui-sans-serif, system-ui; }
+
+
+/* Blog title font (Bungee Shade variable from layout) */
+.blog-title { font-family: var(--font-bungee-shade), system-ui, sans-serif; }
+
+/* Stable aspect helpers (works even if Tailwind aspect plugin isn't there) */
+.aspect-16-10 { aspect-ratio: 16 / 10; }
+.aspect-16-11 { aspect-ratio: 16 / 11; }
+
+/* Simple glass button */
+.glass-btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .5rem 1rem; border-radius: 9999px; font-size: .875rem; font-weight: 500;
+  background: rgba(255,255,255,.18);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,.35);
+  box-shadow: 0 4px 18px rgba(2,6,23,.10);
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+.glass-btn:hover { transform: translateY(-1px); background: rgba(255,255,255,.24); box-shadow: 0 8px 24px rgba(2,6,23,.14); }
+
+.tree-wind {
+  animation: tree-sway 4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* انیمیشن باد ملایم */
+@keyframes tree-sway {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(0.8deg) scale(1.01);
+  }
+  50% {
+    transform: rotate(0deg) scale(1);
+  }
+  75% {
+    transform: rotate(-0.8deg) scale(1.01);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+/* استک دو لایهٔ درخت */
+.tree-stack {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* مطمئن می‌شیم هر دو لایه دقیقاً روی هم باشن */
+.tree-img-base,
+.tree-img-leaves {
+  position: absolute !important;
+  inset: 0 !important;
+}
+
+/* فقط تاج درخت توی این لایه دیده بشه و تکون بخوره */
+.tree-img-leaves {
+  /* top right bottom left → این یعنی پایین تصویر رو قیچی کن */
+  clip-path: inset(0 0 45% 0);
+  /* اگر تنه هنوز تکون می‌خوره، عدد 45% رو بیشتر کن (مثلاً 50%) */
+
+  animation: leaves-wind 4s ease-in-out infinite;
+  transform-origin: 50% 42%; /* نقطهٔ چرخش تقریباً سر تنه */
+}
+
+/* خود تنه ثابت می‌مونه، نیازی به انیمیشن نداره */
+.tree-img-base {
+  transform-origin: bottom center;
+}
+
+/* انیمیشن باد ملایم فقط برای تاج */
+@keyframes leaves-wind {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  25% {
+    transform: translateX(1px) rotate(0.4deg);
+  }
+  50% {
+    transform: translateX(0) rotate(0deg);
+  }
+  75% {
+    transform: translateX(-1px) rotate(-0.4deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
 }
