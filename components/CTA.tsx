@@ -4,7 +4,8 @@ import { Mail, Globe } from "lucide-react";
 export default function CTA() {
   return (
     <main className="flex min-h-[80vh] flex-col items-center justify-center 
-    bg-linear-to-r from-[#c8ebdd]  via-[#fcfcfc] via-35% to-[#b1d5c7] to-98%
+    bg-linear-to-r from-[#c8ebdd]
+      via-[#fcfcfc] via-35% to-[#b1d5c7] to-98%
    px-6 py-20 text-center text-[#164137]">
       {/* headline */}
       <h1 className="text-4xl md:text-6xl font-bold mb-4">

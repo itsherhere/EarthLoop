@@ -60,7 +60,7 @@ export default function Hero({
             className="
               inline-flex items-center justify-center
                px-4 sm:px-7 py-3 sm:py-3.5
-              bg-[#379e71]
+              bg-[#377974]
               text-[15px] sm:text-base font-semibold
               text-black
               ring-1 ring-[#379e71]/20 
@@ -76,9 +76,9 @@ export default function Hero({
               inline-flex items-center justify-center
               rounded-full px-12 sm:px-15 py-3 sm:py-3.5
               text-[15px] sm:text-base font-semibold
-              text-white
-             bg-[#3b7b71]
-              ring-3 ring-[#6bb092]
+              text-[#377974]
+             bg-[#91c7bf]
+              ring-1 ring-[#377974]
               hover:translate-y-0.5
               hover:shadow-[0_px_0_rgba(0,0,0,0.25)]
               active:translate-y-1 active:shadow-[0_3px_0_rgba(0,0,0,0.25)]

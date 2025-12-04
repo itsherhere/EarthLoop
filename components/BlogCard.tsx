@@ -22,7 +22,7 @@ export default function BlogCard({
       className="
         h-full
         flex flex-col
-        rounded-2xl bg-[#38635d]
+        rounded-2xl bg-[#1e3d39]
         shadow-md ring-1 ring-black/5
         overflow-hidden
         transition hover:shadow-lg

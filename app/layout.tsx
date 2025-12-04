@@ -4,7 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import localFont from "next/font/local";
 import {Geist, Geist_Mono ,Roboto ,Bungee_Shade, Inter, Galdeano, DM_Sans, Poppins } from "next/font/google";
-
+import LayoutShell from "@/components/LayoutShell";
 
 const lemon = localFont({
   src: [
@@ -16,7 +16,7 @@ const lemon = localFont({
 
 const roboto = Roboto({
   subsets: ["latin"],
-  weight: ["400", "500", "700"], // هر وزنی که می‌خوای
+  weight: ["400", "500", "700"], 
   variable: "--font-roboto",
   display: "swap",
 });
@@ -56,12 +56,16 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
         style={{background:"fffffff" }}
       >
-        <div className="bg-gradient-to-r from-[#1f5049] via-[#3b7b71] to-[#2E5F56]">
+        {/*<div className="bg-gradient-to-r from-[#15443d] via-[#417b72] to-[#165046]">
           <Navbar/>
           
         {children}
         <Footer/>
-        </div>
+  </div>*/}
+  <div className="bg-gradient-to-r from-[#14403B] via-[#306C67] to-[#103B37]">
+  <LayoutShell>{children}</LayoutShell>
+  </div>
+
       </body>
     </html>
   );

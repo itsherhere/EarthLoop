@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
+import { navLink } from "@/constants";
 
 export const Navbar: React.FC = () => {
   const [open, setOpen] = React.useState(false);
@@ -13,7 +14,9 @@ export const Navbar: React.FC = () => {
     const onScroll = () => setScrolled(window.scrollY > 4);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   return (
@@ -42,7 +45,7 @@ export const Navbar: React.FC = () => {
           </Link>
 
           {/* desktop menu */}
-          <div className="hidden lg:flex items-center gap-8">
+          {/*<div className="hidden lg:flex items-center gap-8">
             <Link
               href="/about"
               className="text-black/70 text-[18px] tracking-wide hover:text-black transition"
@@ -66,13 +69,25 @@ export const Navbar: React.FC = () => {
               className="text-black/70 text-[18px] tracking-wide hover:text-black transition"
             >
               Contact
-            </Link>
-          </div>
+    </Link>
+          
+          </div>*/}
+
+          <ul className="hidden lg:flex items-center gap-8">
+            {navLink.map(({ label }) => (
+              <li key={label}>
+                <a  href={label} className="text-black/70 text-[18px] tracking-wide hover:text-black transition">{label}</a>
+              </li>
+            ))}
+          </ul>
+          {/* better replacement it just needs to be worked on directioning */}
+      
+          
 
           {/* actions (desktop) */}
           <div className="hidden lg:flex items-center gap-3">
             <Button
-              href="/signin"
+              href="/signup"
               variant=""
               size="md"
               className="

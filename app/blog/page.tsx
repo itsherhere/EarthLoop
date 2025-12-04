@@ -15,7 +15,7 @@ export default function BlogPage() {
       </div>
 
       <section className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {posts.map(p => (
+        {posts.map((p) => (
           <BlogCard
             key={p.slug}
             href={`/blog/${p.slug}`}

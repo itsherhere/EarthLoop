@@ -9,21 +9,15 @@ export default function AuthPage() {
 
   return (
     <div className="relative min-h-screen bg-[#020617] text-slate-50 flex items-center justify-center overflow-hidden">
-      {/* Background gradient + grid */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-sky-500/10 to-emerald-900/60" />
-        {/* subtle grid */}
         <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_1px_1px,#16a34a_1px,transparent_0)] [background-size:40px_40px]" />
-        {/* bottom wave-ish fade */}
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/60 to-transparent" />
       </div>
 
-      {/* Floating card */}
       <div className="relative w-full max-w-md rounded-3xl border border-emerald-400/25 bg-slate-900/70 backdrop-blur-2xl shadow-[0_0_60px_rgba(0,0,0,0.75)] px-8 py-10 space-y-8">
-        {/* Logo + subtitle */}
         <div className="text-center space-y-3">
           <div className="mx-auto inline-flex items-center justify-center h-10 w-10 rounded-full border border-emerald-400/60 bg-slate-900/80 shadow-[0_0_25px_rgba(16,185,129,0.6)]">
-            {/* simple placeholder "loop" logo */}
             <div className="h-6 w-6 rounded-full border-2 border-emerald-400" />
           </div>
           <h1 className="text-2xl font-semibold tracking-tight">EarthLoop</h1>
@@ -32,7 +26,6 @@ export default function AuthPage() {
           </p>
         </div>
 
-        {/* Tabs */}
         <div className="flex items-center justify-center gap-8 text-sm font-medium">
           <button
             type="button"
