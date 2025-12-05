@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getAllSlugs, getPostBySlug } from "@/app/lib/blog";
 import { getAllPosts } from "@/app/lib/blog";
 import BackButton from "@/components/ui/BackButton";
+import LayoutShell from "@/components/LayoutShell";
 
 type PageProps = {
   params: Promise<{
@@ -53,6 +54,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) return notFound();
 
   return (
+    <LayoutShell className="bg-gradient-to-b from-[#0b2e28] via-[#0f3e36] to-[#154d45]">
     <main className="min-h-screen w-full bg-gradient-to-b from-[#0b2e28] via-[#0f3e36] to-[#154d45] pt-20 pb-24">
       <BackButton/>
       {/* Header */}
@@ -128,6 +130,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 )}
 
     </main>
+    </LayoutShell>
   );
   
 }

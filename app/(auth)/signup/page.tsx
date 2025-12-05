@@ -1,7 +1,8 @@
 import { AuthShell } from "@/components/AuthShell";
-
+import LayoutShell from "@/components/LayoutShell";
 export default function SignupPage() {
   return (
+    <LayoutShell className="bg-[#194541]/95">
     <AuthShell
       title="Get Started Now"
       subtitle="Create your EarthLoop workspace with your company credentials."
@@ -86,5 +87,6 @@ export default function SignupPage() {
         </div>
       </form>
     </AuthShell>
+    </LayoutShell>
   );
 }

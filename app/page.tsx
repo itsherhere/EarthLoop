@@ -1,3 +1,4 @@
+import LayoutShell from "@/components/LayoutShell";
 import { Navbar } from "@/components/Navbar";
 import Image from "next/image";
 import Hero from "@/components/Hero";
@@ -10,7 +11,7 @@ import CTA from "@/components/CTA";
 
 export default function Home() {
   return (
-    <>
+    <LayoutShell className="bg-gradient-to-r from-[#15443d] via-[#417b72] to-[#165046]">
       <Hero treeSrc="/images/tree.png" />
       <AboutUs bgSrc="/images/about-hero.png" />
       <WhyEarthLoop />
@@ -18,6 +19,6 @@ export default function Home() {
       <BlogGrid limit={3} />
       <Pricing />
       <CTA />
-    </>
+    </LayoutShell>
   );
 }

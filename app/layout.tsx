@@ -62,9 +62,7 @@ export default function RootLayout({
         {children}
         <Footer/>
   </div>*/}
-  <div className="bg-gradient-to-r from-[#14403B] via-[#306C67] to-[#103B37]">
-  <LayoutShell>{children}</LayoutShell>
-  </div>
+  {children}
 
       </body>
     </html>

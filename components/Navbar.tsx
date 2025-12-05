@@ -25,6 +25,7 @@ export const Navbar: React.FC = () => {
         "sticky top-2 z-50 mx-5 ",
         "rounded-xl md:rounded-3xl lg:rounded-full",
         "content-center",
+        "bg-transparent",
         "backdrop-blur    supports-[backdrop-filter]:bg-white/60",
         scrolled
           ? "shadow-md shadow-black/10 border border-black/5"
