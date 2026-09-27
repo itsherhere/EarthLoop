@@ -27,7 +27,6 @@ export default function Card({
   icon,
   href,
   buttonText = "Learn More",
-  buttonColor,
   buttonVariant = "primary",
   buttonClassName,
   className,
@@ -99,7 +98,7 @@ export default function Card({
             <div className="mt-8">
               <Button
                 href={href}
-                variant={buttonVariant}        // now respected
+                variant={buttonVariant === "primary" ? "filled" : buttonVariant}
                 block
                 className={cn("w-full md:px-auto bg-white/0   text-white ring-1 ring-white/25 hover:ring-white/60",buttonToneClass, buttonClassName)}
               >
