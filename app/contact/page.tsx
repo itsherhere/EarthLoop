@@ -1,3 +1,4 @@
+import Link from "next/link";
 import LayoutShell from "@/components/LayoutShell";
 
 export default function ContactPage() {
@@ -15,12 +16,12 @@ export default function ContactPage() {
             EarthLoop is a product prototype exploring clearer carbon-accounting
             and ESG workflows for small and medium-sized businesses.
           </p>
-          <a
+          <Link
             href="/"
             className="mt-8 inline-flex rounded-full border border-white/30 px-5 py-3 text-sm font-semibold transition hover:bg-white/10"
           >
             Back to EarthLoop
-          </a>
+          </Link>
         </div>
       </section>
     </LayoutShell>
