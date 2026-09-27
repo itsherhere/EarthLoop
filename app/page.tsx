@@ -1,6 +1,4 @@
 import LayoutShell from "@/components/LayoutShell";
-import { Navbar } from "@/components/Navbar";
-import Image from "next/image";
 import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
 import WhyEarthLoop from "@/components/WhyEarthLoop";

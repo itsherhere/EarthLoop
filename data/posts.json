@@ -6,7 +6,11 @@
     "date": "2025-11-01",
     "author": "EarthLoop Editorial",
     "coverImage": "/images/blog/carbon-footprint.png",
-    "tags": ["carbon", "sustainability", "basics"],
+    "tags": [
+      "carbon",
+      "sustainability",
+      "basics"
+    ],
     "content": [
       "A carbon footprint measures the total greenhouse gases (GHG) emitted directly and indirectly by an individual, organization, or product. It’s expressed in tonnes of CO₂ equivalent and includes emissions from energy use, supply chains, transportation, and production.",
       "For businesses, calculating carbon footprints helps identify inefficiencies and create reduction strategies that align with global sustainability goals such as the Paris Agreement. Beyond environmental impact, companies that track emissions gain financial advantages — reduced energy costs, improved investor trust, and compliance with upcoming regulations.",
@@ -20,7 +24,11 @@
     "date": "2025-11-02",
     "author": "EarthLoop Editorial",
     "coverImage": "/images/blog/energy-bills.png",
-    "tags": ["data", "energy", "carbon-accounting"],
+    "tags": [
+      "data",
+      "energy",
+      "carbon-accounting"
+    ],
     "content": [
       "Every sustainability journey begins with good data. Many organizations underestimate how much useful information already exists in their monthly energy bills and supplier invoices.",
       "By centralizing these data sources, standardizing units, and tagging them by scope and source, you can transform static numbers into live insights for carbon accounting.",
@@ -34,7 +42,12 @@
     "date": "2025-11-03",
     "author": "EarthLoop Editorial",
     "coverImage": "/images/blog/csrd-green.png",
-    "tags": ["CSRD", "EU", "sustainability", "SMEs"],
+    "tags": [
+      "CSRD",
+      "EU",
+      "sustainability",
+      "SMEs"
+    ],
     "content": [
       "The Corporate Sustainability Reporting Directive (CSRD) requires thousands of European businesses to disclose detailed environmental, social, and governance (ESG) data.",
       "While compliance might seem daunting, SMEs can treat it as a strategic opportunity: by aligning earlier, they build credibility with investors and supply chains that already demand transparent ESG reporting.",
@@ -48,7 +61,11 @@
     "date": "2025-11-04",
     "author": "EarthLoop Data Team",
     "coverImage": "/images/blog/esg-globe.png",
-    "tags": ["ESG", "benchmarking", "data"],
+    "tags": [
+      "ESG",
+      "benchmarking",
+      "data"
+    ],
     "content": [
       "Public databases such as Eurostat and the Dutch CBS offer a wealth of environmental and economic indicators. These datasets help organizations compare their performance to regional or sectoral averages.",
       "Start by selecting relevant indicators like energy intensity, waste management efficiency, or renewable energy share. Then normalize your company’s metrics to the same units and timeframes.",
@@ -57,16 +74,20 @@
   },
   {
     "slug": "earthloop-pilot-emission-reduction",
-    "title": "How One Pilot Company Cut 25% of Its Emissions with EarthLoop",
-    "excerpt": "A real story of sustainability in action — from baseline to measurable results.",
+    "title": "Illustrative Pilot: Exploring a 25% Emissions-Reduction Scenario",
+    "excerpt": "A demo scenario showing how a sustainability workflow could move from baseline data to measurable reduction actions.",
     "date": "2025-11-05",
-    "author": "EarthLoop Team",
+    "author": "EarthLoop Demo",
     "coverImage": "/images/blog/data-clarity.png",
-    "tags": ["case-study", "emission-reduction", "earthloop"],
+    "tags": [
+      "case-study",
+      "emission-reduction",
+      "earthloop"
+    ],
     "content": [
-      "In 2025, one of EarthLoop’s pilot clients — a mid-sized logistics company — reduced its CO₂ emissions by 25% within nine months.",
-      "The process began with data centralization and AI-powered carbon forecasting. This identified their highest emission sources: fleet fuel use and heating systems.",
-      "By switching to hybrid transport, optimizing routes, and installing smart thermostats, the company achieved verifiable emission cuts while improving operational efficiency."
+      "This portfolio scenario illustrates how a mid-sized logistics company could use centralized sustainability data to identify major emission sources.",
+      "The example focuses on fleet fuel use and heating systems, then explores possible actions such as route optimization, hybrid transport, and smart thermostats.",
+      "The figures are illustrative product-demo content rather than audited results from a real EarthLoop customer."
     ]
   },
   {
@@ -76,7 +97,11 @@
     "date": "2025-11-06",
     "author": "EarthLoop Editorial",
     "coverImage": "/images/blog/sprout.png",
-    "tags": ["data", "analytics", "carbon-management"],
+    "tags": [
+      "data",
+      "analytics",
+      "carbon-management"
+    ],
     "content": [
       "Sustainability data often sits across multiple spreadsheets, emails, and departments — a setup that leads to delays and reporting errors.",
       "To achieve carbon clarity, businesses must unify data into a single platform where energy, waste, transport, and procurement metrics are standardized and automatically updated.",

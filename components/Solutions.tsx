@@ -86,8 +86,8 @@ export default function Solutions() {
                 {/* CTA Button */}
                 <div className="mt-8">
                   <Button
-                    href="#"
-                    variant="unstyled"
+                    href="/solutions"
+                    variant="ghost"
                     className="
                       inline-flex items-center justify-center
                       h-12 px-6 rounded-full

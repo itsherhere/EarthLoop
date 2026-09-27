@@ -1,5 +1,4 @@
 import { AuthShell } from "@/components/AuthShell";
-import { div } from "framer-motion/client";
 import LayoutShell from "@/components/LayoutShell";
 export default function LoginPage() {
   return (
@@ -7,7 +6,6 @@ export default function LoginPage() {
      <AuthShell
       title="Welcome back!"
       subtitle="Enter your credentials to access your account."
-      primaryButtonLabel="Login"
       bottomText={
         <>
           Don&apos;t have an account?{" "}

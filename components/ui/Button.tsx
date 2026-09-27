@@ -22,7 +22,6 @@ export default function Button({
   children,
   className = "",
   ariaLabel,
-  color, // not used by default (kept for compatibility)
   block = false,
 }: ButtonProps) {
   const base =
@@ -51,7 +50,7 @@ export default function Button({
 
   const width = block ? "w-full" : "";
   
-  const classes = `${base} ${sizes[size]} ${variants[variant]} ${className}`;
+  const classes = `${base} ${sizes[size]} ${variants[variant]} ${width} ${className}`;
   const content = <span>{children}</span>;
 
   return href ? (
