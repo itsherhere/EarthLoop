@@ -12,7 +12,7 @@ type Feature = {
 const features: Feature[] = [
   {
     title: "AI-powered\nanalytics",
-    desc: "Get real-time CO₂ and ESG insights tailored for your business.",
+    desc: "Explore CO₂ and ESG insights through a clear, business-focused interface.",
     icon: (
       <svg viewBox="0 0 24 24" width="100" height="100" className="mx-auto">
         <g fill="none" stroke="#8AD1AF" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
@@ -40,7 +40,7 @@ const features: Feature[] = [
   },
   {
     title: "Made for\nSMEs",
-    desc: "Affordable, easy to use, and fully compliant with CSRD standards.",
+    desc: "Designed around practical sustainability reporting workflows for SMEs.",
     icon: (
       <svg viewBox="0 0 24 24" width="100" height="100" className="mx-auto">
         <g fill="none" stroke="#8AD1AF" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
