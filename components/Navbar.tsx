@@ -75,9 +75,9 @@ export const Navbar: React.FC = () => {
           </div>*/}
 
           <ul className="hidden lg:flex items-center gap-8">
-            {navLink.map(({ label }) => (
+            {navLink.map(({ label, href }) => (
               <li key={label}>
-                <a  href={label} className="text-black/70 text-[18px] tracking-wide hover:text-black transition">{label}</a>
+                <Link href={href} className="text-black/70 text-[18px] tracking-wide hover:text-black transition">{label}</Link>
               </li>
             ))}
           </ul>
@@ -89,7 +89,7 @@ export const Navbar: React.FC = () => {
           <div className="hidden lg:flex items-center gap-3">
             <Button
               href="/signup"
-              variant=""
+              variant="outline"
               size="md"
               className="
               transform  hover:text-[#1d3630]
@@ -97,15 +97,15 @@ export const Navbar: React.FC = () => {
                 bg-white
                 border-2 border-[#356a5d]
                 shadow-[2px_4px_4px_#00000040]
-                text-[16px] font-Roboto font-medium
+                text-[16px] font-Roboto font-medium text-[#356a5d]
               "
             >
-              Sign in
+              Sign up
             </Button>
 
             <Button
               href="/login"
-              variant=""
+              variant="filled"
               size="md"
               className="
                 transform bg-[#356a5d] hover:text-[#356a5d]
@@ -190,7 +190,7 @@ export const Navbar: React.FC = () => {
 
             <div className="mt-3 flex gap-2 px-2">
               <Button
-                href="/signin"
+                href="/signup"
                 variant="outline"
                 size="sm"
                 className="
@@ -200,7 +200,7 @@ export const Navbar: React.FC = () => {
                   text-sm font-medium w-full
                 "
               >
-                Sign in
+                Sign up
               </Button>
 
               <Button
