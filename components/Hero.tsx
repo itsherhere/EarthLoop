@@ -69,7 +69,7 @@ export default function Hero({
             "> Calculate&nbsp;Footprint
             </Button>{/* fix styling using component and props */}
           <Button
-          variant=""
+          variant="ghost"
             href={ctaSecondaryHref}
             className="
               inline-flex items-center justify-center
