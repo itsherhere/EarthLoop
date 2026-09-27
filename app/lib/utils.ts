@@ -1,7 +1,7 @@
-import { clsx } from "clsx";
+import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-// merges className strings and removes duplicates/conflicts
-export function cn(...inputs: any[]) {
+// Merges className values and resolves Tailwind conflicts.
+export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
