@@ -6,7 +6,6 @@ export default function SignupPage() {
     <AuthShell
       title="Get Started Now"
       subtitle="Create your EarthLoop workspace with your company credentials."
-      primaryButtonLabel="Signup"
       bottomText={
         <>
           Have an account?{" "}
